@@ -1,0 +1,29 @@
+<ion-view style="background: url(img/login.jpg) center; background-size: cover;">
+  <ion-header-bar class="bar-assertive">
+    <h1 class="title">Login</h1>
+  </ion-header-bar>
+  <ion-content>
+
+  <div class="list">
+  <label class="item item-input item-floating-label">
+    <span class="input-label"><font color="#FFFFFF" size="3px">Email-ID</font></span>
+    <input type="email" placeholder="Enter Email" ng-model="user.email" style="color:#FFFFFF;">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label"><font color="#FFFFFFF" size="3px">Password</font></span>
+    <input type="password" placeholder="Enter Password" ng-model="user.password" style="color:#FFFFFF;">
+  </label>
+</div>
+  <br>
+    <div class="padding">
+      <button class="button  button-assertive button-block" ng-click="login()">LogIn</button>
+      <div class="error" ng-if="errorMessage" ng-bind="errorMessage">
+      </div>
+
+    </div>
+  </ion-content>
+        <div class="button-bar" style="position: absolute; bottom: 0px; width: 100%">
+            <button ui-sref="signup" class="button button-positive button-block ">Free Signup</button>
+            <button ui-sref="reset-password" class="button button-balanced button-block ">Forgot Password</button>
+          </div>
+</ion-view>
